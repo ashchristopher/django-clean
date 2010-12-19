@@ -9,10 +9,10 @@ files you would like automatically removed.
 Installation
 ------------
 1. Add 'clean' to your installed apps in your settings.py file.
-    > INSTALLED_APPS = [
-    >    ...,
-    >    'clean',
-    >]
+> INSTALLED_APPS = [
+>    ...,
+>    'clean',
+> ]
     
 2. Define a PROJECT_PATH in your settings.py file.
 
