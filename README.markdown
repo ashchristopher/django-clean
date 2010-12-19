@@ -19,9 +19,9 @@ Installation
     > PROJECT_PATH = os.path.dirname(__file__)  
     
 3. *OPTIONAL* Define the regular expression patterns you would like to match against in your settings.py file (by default, there is only a regex pattern for **pyc** files).  
-    > `CLEAN_PATTERNS = [  
+    > CLEAN_PATTERNS = [  
     >    r'^.+\.pyc$',  
-    >]`  
+    >]  
     
     
 Usage
