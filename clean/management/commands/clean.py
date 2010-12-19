@@ -10,7 +10,7 @@ from django.conf import settings
 #       because they are compiled before we can turn off writing bytecode. 
 sys.dont_write_bytecode = True
 
-DEFAULT_CLEAN_PATTERN = [
+DEFAULT_CLEAN_PATTERNS = [
     r'^.+\.pyc$',
 ]
 
@@ -28,7 +28,7 @@ class Command(BaseCommand):
     
     
     project_path = getattr(settings, 'PROJECT_PATH', None)
-    clean_types = getattr(settings, 'CLEAN_PATTERNS', DEFAULT_CLEAN_PATTERN)
+    clean_types = getattr(settings, 'CLEAN_PATTERNS', DEFAULT_CLEAN_PATTERNS)
     
     option_list = BaseCommand.option_list  + (
         make_option('-f', '--force', action="store_true", default=False, dest='force', help='Force the cleanup without user interaction.'),
