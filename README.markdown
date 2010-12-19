@@ -8,31 +8,27 @@ files you would like automatically removed.
 
 Installation
 ------------
-1. Add 'clean' to your installed apps in your settings.py file.
-> INSTALLED_APPS = [
->    ...,
->    'clean',
-> ]
+1. Add 'clean' to your installed apps in your settings.py file.  
+>INSTALLED_APPS = [  
+>    ...,  
+>    'clean',  
+>]  
     
-2. Define a PROJECT_PATH in your settings.py file.
-
-    > import os.path, sys
-    > PROJECT_PATH = os.path.dirname(__file__)
+2. Define a PROJECT_PATH in your settings.py file.  
+    > import os.path, sys  
+    > PROJECT_PATH = os.path.dirname(__file__)  
     
-3. *OPTIONAL* Define the regular expression patterns you would like to match against in your settings.py file (by default, there is only a regex pattern for **pyc** files).
-    
-    > CLEAN_PATTERNS = [
-    >    r'^.+\.pyc$',
-    >]
+3. *OPTIONAL* Define the regular expression patterns you would like to match against in your settings.py file (by default, there is only a regex pattern for **pyc** files).  
+    > CLEAN_PATTERNS = [  
+    >    `r'^.+\.pyc$'`,  
+    >]  
     
     
 Usage
 -----
-From your shell, type:
+From your shell, type:  
+    > python manage.py clean  
 
-    > python manage.py clean    
+This will prompt you to remove files that match the regular expression patterns.  
 
-This will prompt you to remove files that match the regular expression patterns.
-
-If you are confident in your regex, you can supply a *--force* option which will not prompt you before removing pattern matches. 
-    
+If you are confident in your regex, you can supply a *--force* option which will not prompt you before removing pattern matches.
