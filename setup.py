@@ -13,7 +13,7 @@ setup(
     license='BSD',
     include_package_data=True,
     zip_safe=True, # because we're including media that Django needs
-    keywords='django clean temporary cleanup pyc',
+    keywords='django clean temporary cleanup pycq',
     packages=find_packages(),
     classifiers=[
         'Development Status :: 5 - Production/Stable',
