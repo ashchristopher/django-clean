@@ -1,0 +1,43 @@
+django-clean
+====================
+
+django-clean is a package that lets you specify files or directories that you
+would like cleaned up. You can specify regular expressions to define which 
+files you would like automatically removed.
+
+
+Installation
+------------
+1. Add 'clean' to your installed apps in your settings.py file.  
+    
+    INSTALLED_APPS = [  
+        'clean',
+        ...
+    ]  
+
+    
+2. Define a PROJECT_PATH in your settings.py file.  
+
+    import os.path, sys  
+    PROJECT_PATH = os.path.dirname(__file__)  
+
+    
+3. *OPTIONAL* Define the regular expression patterns you would like to match against in 
+    your settings.py file. The default is a regex pattern to remove *.pyc files. (NOTE: The 
+    regex matches against the full qualified path).
+      
+    CLEAN_PATTERNS = [  
+        r'^.+\.pyc$',  
+    ]  
+    
+    
+Usage
+-----
+From your shell, type:  
+
+    python manage.py clean  
+
+This will prompt you to remove files that match the regular expression patterns.  
+
+If you are confident in your regex, you can supply a --force option which will not prompt 
+you before removing pattern matches.
