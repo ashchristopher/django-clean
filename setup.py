@@ -8,21 +8,22 @@ setup(
     name = 'django-clean',
     version=__import__('clean').__version__,
     description = 'Clean out files in a django app.',
+    long_description=open('README').read(),
     author = 'Ash Christopher',
     author_email = 'ash.christopher@gmail.com',
-    url = 'http://github.com/ashchristopher/django-clean',
-    download_url='http://github.com/ashchristopher/django-clean',
-    license='MIT',
+    url='http://github.com/ashchristopher/django-clean',
+    download_url='http://github.com/ashchristopher/django-clean/downloads',
+    license='BSD',
     include_package_data=True,
     zip_safe=True, # because we're including media that Django needs
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
-        'Framework :: Django',
         'Intended Audience :: Developers',
-        'License :: Django License',
+        'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Topic :: Software Development :: Libraries :: Python Modules',
-    ],
+        'Framework :: Django',
+        ]
+    
 )
