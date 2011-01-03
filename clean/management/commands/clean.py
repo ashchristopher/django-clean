@@ -26,7 +26,6 @@ class Command(BaseCommand):
     Cleans up files and directories in a Django project which match given regular expressions.
     """
     
-    
     project_path = getattr(settings, 'PROJECT_PATH', None)
     clean_types = getattr(settings, 'CLEAN_PATTERNS', DEFAULT_CLEAN_PATTERNS)
     
@@ -65,4 +64,3 @@ class Command(BaseCommand):
             os.remove(asset)
         elif os.path.isdir(asset):
             os.rmdir(asset)
-        
