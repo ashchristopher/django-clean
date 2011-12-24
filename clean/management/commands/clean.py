@@ -26,7 +26,7 @@ class Command(BaseCommand):
     Cleans up files and directories in a Django project which match given regular expressions.
     """
     
-    project_path = getattr(settings, 'PROJECT_PATH', None)
+    project_path = getattr(settings, 'PROJECT_PATH', os.path.dirname(__file__))
     clean_types = getattr(settings, 'CLEAN_PATTERNS', DEFAULT_CLEAN_PATTERNS)
     
     option_list = BaseCommand.option_list  + (
